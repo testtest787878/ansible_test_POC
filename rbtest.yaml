@@ -1,1 +1,11 @@
-application: name: TestApp version: 1.0.0 environment: development 
+# hello_world.yml
+---
+- name: My first Ansible Hello World with variable input
+  hosts: localhost
+  vars:
+    - name: "my_message"
+ 
+  tasks:
+    - name: Print the custom message
+      debug:
+        msg: "{{my_message}}"
